@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FiVA: Fine-grained Visual Attribute Dataset for Text-to-Image Diffusion Models">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FiVA: Fine-grained Visual Attribute Dataset for Text-to-Image Diffusion Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/fiva_logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FiVA: Fine-grained Visual Attribute Dataset for Text-to-Image Diffusion Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wutong16.github.io/">Tong Wu</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://justimyhxu.github.io/">Yinghao Xu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ryanpo.com/">Ryan Po</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://kszpxxzmc.github.io/">Mengchen Zhang</a><sup>3,5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.guandaoyang.com/">Guandao Yang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=GMzzRRUAAAAJ&hl=zh-CN">Dahua Lin</a><sup>2,5,6</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Stanford University</span>
+            <span class="author-block"><sup>2</sup> The Chinese University of Hong Kong,</span>
+            <span class="author-block"><sup>3</sup>Zhejiang University</span>
+            <span class="author-block"><sup>4</sup>S-Lab, Nanyang Technological University</span>
+            <span class="author-block"><sup>5</sup>Shanghai Artificial Intelligence Laboratory</span>
+            <span class="author-block"><sup>6</sup>CPII under UnnoHK</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/wutong16/FiVA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/FiVA/FiVA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/teaser.jpg" >
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in text-to-image generation have enabled the creation of high-quality images with diverse applications.
+            However, accurately describing desired visual attributes can be challenging, especially for non-experts in art and photography.
+            An intuitive solution involves adopting favorable attributes from source images.
+            Current methods attempt to distill identity and style from source images.
+            However, "style" is a broad concept that includes texture, color, and artistic elements, but does not cover other important attributes like lighting and dynamics.
+            Additionally, a simplified "style" adaptation prevents combining multiple attributes from different sources into one generated image.
+            In this work, we formulate a more effective approach to decompose the aesthetics of a picture into specific visual attributes, letting users apply characteristics like lighting, texture, and dynamics from different images.
+            To achieve this goal, we constructed the first fine-grained visual attributes dataset (FiVA) to the best of our knowledge.
+            This FiVA dataset features a well-organized taxonomy for visual attributes and includes over 1M high-quality generated images with visual attribute annotations.
+            Leveraging this dataset, we propose a fine-grained visual attributes adaptation framework (FiVA-Adapter) , which decouples and adapts visual attributes from one or more source images into a generated one.
+            This approach enhances user-friendly customization, allowing users to selectively apply desired attributes to create images that meet their unique preferences and specific content requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Dataset Overview </h2>
+    <h3 class="title is-6">Visual Attributes Taxonomy and Paired Data Construction</h3>
+    <p>
+      Visual attributes encompass a broad spectrum, varying across use cases.
+      To address this, we identified general attribute types to cover diverse applications, categorizing them into groups and refining each into detailed subcategories.
+      Redundant or unreasonable entries were filtered out. Similarly, we developed a taxonomy for subjects.
+      Attributes and their augmentations were then paired with specific subjects to generate prompts using a state-of-the-art image generation model,
+      enabling easy pairing of images with shared attributes.
+      Finally, pair accuracy was validated through human evaluation, incorporating a range-sensitive filter introduced below.
+    </p>
+    <p>
+      It is worth noting that data constructed using this method does not guarantee precise physical or pixel-level pairing but only ensures rough consistency.
+      Nevertheless, it enables large-scale data construction and supports most customization needs.
+    </p>
+    <img src="./static/images/data_construction.jpg" >
+
+    <br>
+    <br>
+    <br>
+
+  <h2 class="title is-6"> Range-sensitive Data Filtering </h2>
+    <p>
+      Not all generated images with the same attribute exhibit similar visual effects.
+      For example, attributes like "color" and "stroke" transfer easily across different subjects,
+      while others, such as "lighting" and "dynamics," are range-sensitive, producing varying effects depending on the subject's domain.
+      We use powerful multimodal large language models like GPT-4 to automatically define an attribute's application range,
+      ensuring greater visual consistency between images within that range.
+    </p>
+    <img src="./static/images/filtering.jpg" >
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Method Overview</h2>
+    <img src="./static/images/method.jpg" >
+    <p>
+      FiVA-Adapter has two key design components:
+      1) Attribute-specific visual prompt extractor: The Q-former module takes both the image and attribute instruction as inputs
+      to model the semantic relationship between them, extracting attribute-specific image condition features.
+      2) Multi-image dual cross-attention module: Features from the Q-former (up to N) are zero padded, concatenated, and shuffled
+      before being fed into the cross-attention module, ensuring insensitivity to the order of attributes.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Results </h2>
+
+    <h3 class="title is-6">Qualitative Comparisons on Single Attribute Transferring</h3>
+    <p>
+      Our method achieves superior performance in both visual attribute and text subject accuracy.
+    </p>
+    <img src="./static/images/comparisons.jpg" >
+
+    <br>
+    <br>
+    <br>
+
+    <h2 class="title is-6"> More Results </h2>
+    <p>
+      We can incorporate different attributes from multiple reference images and integrate them into the target subject,
+      while also being capable of extracting various visual attributes from the same reference image based on distinct attribute names.
+    </p>
+    <img src="./static/images/more_results.jpg" >
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{wu2024fiva,
+      title={Fi{VA}: Fine-grained Visual Attribute Dataset for Text-to-Image Diffusion Models},
+      author={Tong Wu and Yinghao Xu and Ryan Po and Mengchen Zhang and Guandao Yang and Jiaqi Wang and Ziwei Liu and Dahua Lin and Gordon Wetzstein},
+      booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+      year={2024},
+      url={https://openreview.net/forum?id=Vp6HAjrdIg}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+            We thank <a href="https://nerfies.github.io/">Nerfies</a> for providing this amazing project template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
